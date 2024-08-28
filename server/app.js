@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
 app.use(
     cors({
-        origin:["http://localhost:5174"],
+        origin:["https://thunderous-kashata-e956c1.netlify.app/"],
         credentials:true
     })
 )
