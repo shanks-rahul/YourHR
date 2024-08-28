@@ -5,7 +5,9 @@ import cors from 'cors';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import errorMiddleware from "./middlewares/error.middleware.js";
+import connectToDB from "./db/configs/dbConn.js";
 const app = express();
+const PORT=5000;
 app.use("/files",express.static("files"));
 
 
@@ -30,5 +32,9 @@ app.use("/ping",(_req,res)=>{
     res.send("pong");
 })
 
+app.listen(PORT,async()=>{
+    await connectToDB();
+    console.log(`App is running at http://localhost:${PORT}`);
+})
 
 export default app;
