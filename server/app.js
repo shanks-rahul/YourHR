@@ -23,6 +23,7 @@ app.use(
         credentials:true
     })
 )
+app.options('*', cors());
 import userRoutes from './routes/user.routes.js';
 import resumeRoutes from './routes/resume.routes.js';
 app.use("/user",userRoutes);
