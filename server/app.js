@@ -25,8 +25,8 @@ app.use(
 )
 import userRoutes from './routes/user.routes.js';
 import resumeRoutes from './routes/resume.routes.js';
-app.use("/api/v1/user",userRoutes);
-app.use("/api/v1/resume",resumeRoutes);
+app.use("https://yourhr-3.onrender.com/user",userRoutes);
+app.use("https://yourhr-3.onrender.com/resume",resumeRoutes);
 app.use(errorMiddleware);
 app.use("/ping",(_req,res)=>{
     res.send("pong");
