@@ -11,7 +11,7 @@ function HomePage(){
                         Fill Your application
                     </h1>
                     <div className="flex items-center justify-start">
-                        <Link to="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/application">
+                        <Link to="/application">
                             <button className="ml-4 border border-green-500  text-white px-4 py-3 rounded-md font-semibold text-lg hover:bg-green-600 transition:all ">
                                 Fill Up
                             </button>

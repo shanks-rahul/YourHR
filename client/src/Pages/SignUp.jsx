@@ -95,7 +95,7 @@ function SignUp(){
                     <button type="submit" className="bg-red-500 hover:bg-red-700 transition-all ease-in-out cursor-pointer py-2 mt-2 rounded-lg">Create Account
                     </button>
                     <p className="text-center mt-2">
-                        Already Have An Account? <Link to="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/login" className="link text-accent cursor-pointer">Login</Link>
+                        Already Have An Account? <Link to="/login" className="link text-accent cursor-pointer">Login</Link>
                     </p>
                 </form>
             </div>
