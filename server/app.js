@@ -10,28 +10,17 @@ import connectToDB from "./db/configs/dbConn.js";
 import {fileURLToPath} from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-
-// 👇️ "/home/john/Desktop/javascript"
 const __dirname = path.dirname(__filename);
 const app = express();
 const PORT=5000;
 app.use("/files",express.static("files"));
-app.use(express.static(path.join(__dirname,"../client/dist")))
-
-
-
-
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
+
 app.use(cors());
-// app.use(
-//     cors({
-//         origin:["https://yourhr-4.onrender.com"],
-//         credentials:true
-//     })
-// )
+
 import userRoutes from './routes/user.routes.js';
 import resumeRoutes from './routes/resume.routes.js';
 app.use("/user",userRoutes);
