@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL="https://yourhr-3.onrender.com"
+const BASE_URL="https://yourhr-36pa.onrender.com"
 
 const axiosInstance=axios.create();
 axiosInstance.defaults.baseURL=BASE_URL;
