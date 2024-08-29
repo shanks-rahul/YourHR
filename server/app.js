@@ -25,12 +25,13 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
-app.use(
-    cors({
-        origin:["https://yourhr-4.onrender.com/"],
-        credentials:true
-    })
-)
+app.use(cors());
+// app.use(
+//     cors({
+//         origin:["https://yourhr-4.onrender.com"],
+//         credentials:true
+//     })
+// )
 import userRoutes from './routes/user.routes.js';
 import resumeRoutes from './routes/resume.routes.js';
 app.use("/user",userRoutes);
