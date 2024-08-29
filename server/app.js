@@ -7,6 +7,12 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import errorMiddleware from "./middlewares/error.middleware.js";
 import connectToDB from "./db/configs/dbConn.js";
+import {fileURLToPath} from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+// 👇️ "/home/john/Desktop/javascript"
+const __dirname = path.dirname(__filename);
 const app = express();
 const PORT=5000;
 app.use("/files",express.static("files"));
