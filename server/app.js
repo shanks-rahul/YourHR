@@ -23,6 +23,10 @@ app.use(cors());
 
 import userRoutes from './routes/user.routes.js';
 import resumeRoutes from './routes/resume.routes.js';
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Credentials', 'true');
+    next();
+});
 app.use("/user",userRoutes);
 app.use("/resume",resumeRoutes);
 app.use(errorMiddleware);
