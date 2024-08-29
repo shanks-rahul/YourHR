@@ -1,1 +1,21 @@
-{"orgId":"team_sQzw0EVoqgPxAcmQDqXxupnF","projectId":"prj_9ZiX0mLUtvSce0UYrgH3JjQ27ojz"}
+{
+    "version":2,
+    "builds":[
+        {
+            "src":"../server/app.js",
+            "use":"@vercel/node"
+        }
+    ],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"../server/app.js",
+            "methods":["GET","POST","PUT","DELETE","PATCH","OPTIONS"],
+            "headers":{
+                "Access-Control-Allow-Origin":"*"
+            }
+        }
+    ],
+    "orgId":"team_sQzw0EVoqgPxAcmQDqXxupnF",
+    "projectId":"prj_9ZiX0mLUtvSce0UYrgH3JjQ27ojz"
+}
