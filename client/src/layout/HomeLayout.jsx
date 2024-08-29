@@ -54,17 +54,13 @@ function HomeLayout({ children }) {
                             </button>
                         </li>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/">Home</Link>
                         </li>
-                        {isLoggedIn && role == "ADMIN" && (
-                            <li>
-                                <Link to="/admin/dashboard">Admin Dashboard</Link>
-                            </li>
-                        )}
+                        
                         {role == "HR" && (
                             <>
                                 <li>
-                                    <Link to="/dashboard">HR Dashboard</Link>
+                                    <Link to="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/dashboard">HR Dashboard</Link>
                                 </li>
                             </>
                         )}
@@ -72,10 +68,10 @@ function HomeLayout({ children }) {
                             <>
                                 <div className='w-full mt-4 flex items-center'>
                                     <button className=' border border-yellow-500 text-sm hover:bg-yellow-600 px-2 py-2 rounded-md w-full font-semibold text-teal-100'>
-                                        <Link to="/login">Login</Link>
+                                        <Link to="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/login">Login</Link>
                                     </button>
                                     <button className='border border-yellow-500 ml-1 text-sm hover:bg-yellow-600 px-2 py-2 rounded-md w-full font-semibold text-teal-100'>
-                                        <Link to="/signup">sign up</Link>
+                                        <Link to="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/signup">sign up</Link>
                                     </button>
                                 </div>
 

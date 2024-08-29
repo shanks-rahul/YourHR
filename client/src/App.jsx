@@ -11,14 +11,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/" element={<HomePage />} />
+        <Route path="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/signup" element={<SignUp />} />
+        <Route path="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/login" element={<Login />} />
         <Route element={<RequireAuth allowedRoles={["USER","HR"]} />}>
-          <Route path="/application" element={<ApplicationPage />} />
+          <Route path="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/application" element={<ApplicationPage />} />
         </Route>
         <Route element={<RequireAuth allowedRoles={["HR"]} />}>
-          <Route path="/dashboard" element={<HrPage />} />
+          <Route path="https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app/dashboard" element={<HrPage />} />
         </Route>
       </Routes>
     </>
