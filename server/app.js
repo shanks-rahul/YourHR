@@ -23,8 +23,10 @@ app.use(
         credentials:true
     })
 )
-app.use(cors());
-app.options('*', cors());
+app.options('*', cors({
+    origin: 'https://66d0339343217ac89b5cd815--gilded-sunburst-e95a84.netlify.app',
+    credentials: true,
+}));
 import userRoutes from './routes/user.routes.js';
 import resumeRoutes from './routes/resume.routes.js';
 app.use("/user",userRoutes);
