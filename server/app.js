@@ -20,7 +20,8 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
 
 app.use(cors({
-    origin:["https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app"]
+    origin:["https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app"],
+    credentials:true
 }));
 
 import userRoutes from './routes/user.routes.js';
