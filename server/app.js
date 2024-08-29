@@ -19,7 +19,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
 
-app.use(cors());
+app.use(cors({
+    origin:["https://yourhr-op6oe7oxl-rahul-agarwallas-projects.vercel.app"]
+}));
 
 import userRoutes from './routes/user.routes.js';
 import resumeRoutes from './routes/resume.routes.js';
