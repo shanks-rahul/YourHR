@@ -13,7 +13,7 @@ function HrPage() {
         loadAllResume();
     }, [])
     function showpdf(pdf) {
-        window.open(`https://thunderous-kashata-e956c1.netlify.app/files/${pdf}`, "_blank", "noreferror");
+        window.open(`https://yourhr-4.onrender.com/files/${pdf}`, "_blank", "noreferror");
     }
     return (
         <HomeLayout>

@@ -2,6 +2,7 @@ import express from "express";
 import {config} from 'dotenv';
 config();
 import cors from 'cors';
+import path from "path";
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import errorMiddleware from "./middlewares/error.middleware.js";
@@ -9,6 +10,7 @@ import connectToDB from "./db/configs/dbConn.js";
 const app = express();
 const PORT=5000;
 app.use("/files",express.static("files"));
+app.use(express.static(path.join(__dirname,"../client/dist")))
 
 
 
@@ -19,14 +21,10 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
 app.use(
     cors({
-        origin:["https://66d0339343217ac89b5cd815--gilded-sunburst-e95a84.netlify.app"],
+        origin:["https://yourhr-4.onrender.com/"],
         credentials:true
     })
 )
-app.options('*', cors({
-    origin: 'https://66d0339343217ac89b5cd815--gilded-sunburst-e95a84.netlify.app',
-    credentials: true,
-}));
 import userRoutes from './routes/user.routes.js';
 import resumeRoutes from './routes/resume.routes.js';
 app.use("/user",userRoutes);
